@@ -53,5 +53,17 @@ public class LionTest {
         when(predator.getKittens()).thenReturn(3);
         assertEquals(3, lion.getKittens());
     }
+    @Test
+    public void getKittens_WhenPredatorIsNull_UsesFeline() throws Exception {
+        Lion lion = new Lion("Самец", null);
+        assertEquals(1, lion.getKittens());
+    }
+
+    @Test
+    public void getFood_WhenPredatorIsNull_UsesFeline() throws Exception {
+        Lion lion = new Lion("Самец", null);
+        List<String> expectedFood = List.of("Животные", "Птицы", "Рыба");
+        assertEquals(expectedFood, lion.getFood());
+    }
 
 }
