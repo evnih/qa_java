@@ -7,7 +7,7 @@ QA Java Project
 
 ### Технологии
 - Java 11
-- JUnit 5
+- JUnit 4
 - Mockito
 - JaCoCo
 
@@ -111,7 +111,7 @@ public class LionAlexTest {
 Также по итогам сформирован отчет Jacoco (target/site/jacoco/)
 <img width="956" alt="Снимок экрана 2025-06-10 в 00 45 15" src="https://github.com/user-attachments/assets/2a443250-fb47-4ef3-82fc-014655318560" />
 
-В соответсвии с задание 100№ покрытие тестами у классов Feline, Cat и Lion.
+В соответсвии с заданием 100% покрытие тестами у классов Feline, Cat и Lion.
 
 
 
