@@ -49,3 +49,4 @@ public class LionAlexTest {
         assertEquals(expectedFood, lionAlex.getFood());
     }
 }
+

@@ -1,28 +1,37 @@
 package com.example;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Lion {
     private final Predator predator;
+    private final Feline feline;
 
+    private final boolean hasMane;
 
-    boolean hasMane;
+    public Lion(String sex, Predator predator, Feline feline) throws Exception {
+        this.predator = Objects.requireNonNull(predator, "Predator не может быть null");
+        this.feline = Objects.requireNonNull(feline, "Feline не может быть null");
+        this.hasMane = setSex(sex);
+
+    }
 
     public Lion(String sex, Predator predator) throws Exception {
-        this.predator = predator;
-        this.feline = new Feline();
+        this(sex, predator, new Feline());
+    }
+    private boolean setSex(String sex) throws Exception {
         if ("Самец".equals(sex)) {
-            hasMane = true;
+            return true;
         } else if ("Самка".equals(sex)) {
-            hasMane = false;
+            return false;
         } else {
             throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
     }
-    Feline feline = new Feline();
+
 
     public int getKittens() {
-        return predator != null ? predator.getKittens() : feline.getKittens();
+        return feline.getKittens();
     }
 
     public boolean doesHaveMane() {
@@ -30,6 +39,6 @@ public class Lion {
     }
 
     public List<String> getFood() throws Exception {
-        return predator != null ? predator.eatMeat() : feline.getFood("Хищник");
+        return predator.eatMeat();
     }
 }
