@@ -15,12 +15,10 @@ public class FelineTest {
         List<String> expectedFood = Arrays.asList("Животные", "Птицы", "Рыба");
         assertEquals(expectedFood, feline.eatMeat());
     }
-
     @Test
     public void testGetFamily() {
         assertEquals("Кошачьи", feline.getFamily());
     }
-
     @Test
     public void testGetKittensWithoutParametr() {
         assertEquals(1, feline.getKittens());

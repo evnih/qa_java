@@ -31,9 +31,6 @@ public class LionTest {
             assertEquals("Используйте допустимые значения пола животного - самец или самка", e.getMessage());
         }
     }
-
-
-
     @Test
     public void testGetFood() throws Exception {
         Lion lion = new Lion("Самка", predator, feline);
@@ -42,8 +39,7 @@ public class LionTest {
         assertEquals(expectedFood, lion.getFood());
         verify(predator).eatMeat();
     }
-
-   @Test
+    @Test
     public void testGetKittens() throws Exception{
         Lion lion = new Lion("Самец", predator, feline);
         when(feline.getKittens()).thenReturn(3);
@@ -54,7 +50,6 @@ public class LionTest {
     public void constructor_ThrowsWhenPredatorIsNull() throws Exception {
         new Lion("Самец", null);
     }
-
     @Test
     public void getFood_CallsPredatorEatMeat() throws Exception {
         Predator predator = mock(Predator.class);
@@ -67,12 +62,10 @@ public class LionTest {
     public void constructor_WhenPredatorIsNull_ThrowsException() throws Exception {
         new Lion("Самец", null, mock(Feline.class));
     }
-
     @Test(expected = NullPointerException.class) // Изменили на NPE
     public void simplifiedConstructor_WhenPredatorIsNull_ThrowsException() throws Exception {
         new Lion("Самец", null);
     }
-
     @Test(expected = NullPointerException.class)
     public void constructor_WhenFelineIsNull_ThrowsException() throws Exception {
         new Lion("Самец", mock(Predator.class), null);

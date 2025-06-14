@@ -19,7 +19,6 @@ public class CatTest {
         Cat cat = new Cat(feline);
         assertEquals("Мяу", cat.getSound());
     }
-
     @Test
     public void testGetFood() throws Exception {
      Cat cat = new Cat(feline);

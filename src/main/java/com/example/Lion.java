@@ -13,9 +13,7 @@ public class Lion {
         this.predator = Objects.requireNonNull(predator, "Predator не может быть null");
         this.feline = Objects.requireNonNull(feline, "Feline не может быть null");
         this.hasMane = setSex(sex);
-
     }
-
     public Lion(String sex, Predator predator) throws Exception {
         this(sex, predator, new Feline());
     }
@@ -28,16 +26,12 @@ public class Lion {
             throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
     }
-
-
     public int getKittens() {
         return feline.getKittens();
     }
-
     public boolean doesHaveMane() {
         return hasMane;
     }
-
     public List<String> getFood() throws Exception {
         return predator.eatMeat();
     }

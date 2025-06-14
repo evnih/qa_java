@@ -23,7 +23,6 @@ public class FelineParamTest {
                     {0}, {1}, {5}, {10}
             });
         }
-
         @Test
         public void testGetKittensWithParameter() {
             assertEquals(kittensCount, feline.getKittens(kittensCount));

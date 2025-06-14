@@ -35,7 +35,6 @@ public class LionParamTest {
                 {"Самка", false}
         };
     }
-
     @Test
     public void testLionConstructorWithValidSexAndMane() throws Exception {
         Lion lion = new Lion(sex, predator);

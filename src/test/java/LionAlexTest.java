@@ -22,25 +22,21 @@ public class LionAlexTest {
         LionAlex lionAlex = new LionAlex(predator);
         assertEquals(List.of("Зебра Марти", "Бегемотиха Глория", "Жираф Мелман"), lionAlex.getFriends());
     }
-
     @Test
     public void getPlaceOfLiving_ReturnsZoo() throws Exception {
         LionAlex lionAlex = new LionAlex(predator);
         assertEquals("Нью-Йоркский зоопарк", lionAlex.getPlaceOfLiving());
     }
-
     @Test
     public void getKittens_AlwaysReturnsZero() throws Exception {
         LionAlex lionAlex = new LionAlex(predator);
         assertEquals(0, lionAlex.getKittens());
     }
-
     @Test
     public void constructor_SetsMaleSexAutomatically() throws Exception {
         LionAlex lionAlex = new LionAlex(predator);
         assertTrue(lionAlex.doesHaveMane());
     }
-
     @Test
     public void getFood_CallsParentMethod() throws Exception {
         LionAlex lionAlex = new LionAlex(predator);
