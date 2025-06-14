@@ -7,7 +7,6 @@ import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -70,5 +69,4 @@ public class LionTest {
     public void constructor_WhenFelineIsNull_ThrowsException() throws Exception {
         new Lion("Самец", mock(Predator.class), null);
     }
-
 }

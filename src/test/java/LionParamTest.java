@@ -20,14 +20,12 @@ public class LionParamTest {
     @Mock
     Predator predator;
 
-
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
     public LionParamTest(String sex, boolean expectedHasMane) {
         this.sex = sex;
         this.expectedHasMane = expectedHasMane;
     }
-
     @Parameterized.Parameters
     public static Object[][] data() {
         return new Object[][]{

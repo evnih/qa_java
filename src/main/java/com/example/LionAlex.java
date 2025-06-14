@@ -11,6 +11,7 @@ public class LionAlex  extends Lion {
     public int getKittens() {
         return 0;
     }
+
     public List<String> getFriends() {
         return List.of("Зебра Марти", "Бегемотиха Глория", "Жираф Мелман");
     }
