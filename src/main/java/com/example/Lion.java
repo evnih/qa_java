@@ -1,22 +1,26 @@
 package com.example;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Lion {
+    private final Feline feline;
 
-    boolean hasMane;
+    private final boolean hasMane;
 
-    public Lion(String sex) throws Exception {
+    public Lion(String sex, Feline feline) throws Exception {
+        this.feline = Objects.requireNonNull(feline, "Feline не может быть null");
+        this.hasMane = setSex(sex);
+    }
+    private boolean setSex(String sex) throws Exception {
         if ("Самец".equals(sex)) {
-            hasMane = true;
+            return true;
         } else if ("Самка".equals(sex)) {
-            hasMane = false;
+            return false;
         } else {
-            throw new Exception("Используйте допустимые значения пола животного - самей или самка");
+            throw new Exception("Используйте допустимые значения пола животного - самец или самка");
         }
     }
-
-    Feline feline = new Feline();
 
     public int getKittens() {
         return feline.getKittens();
@@ -27,6 +31,6 @@ public class Lion {
     }
 
     public List<String> getFood() throws Exception {
-        return feline.getFood("Хищник");
+        return feline.eatMeat();
     }
 }
