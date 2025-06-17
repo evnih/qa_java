@@ -1,5 +1,5 @@
+import com.example.Feline;
 import com.example.Lion;
-import com.example.Predator;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,7 +18,7 @@ public class LionParamTest {
     private final boolean expectedHasMane;
 
     @Mock
-    Predator predator;
+    Feline feline;
 
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
@@ -35,7 +35,7 @@ public class LionParamTest {
     }
     @Test
     public void testLionConstructorWithValidSexAndMane() throws Exception {
-        Lion lion = new Lion(sex, predator);
+        Lion lion = new Lion(sex, feline);
         assertNotNull(lion);
         assertEquals(expectedHasMane, lion.doesHaveMane());
     }
